@@ -31,6 +31,7 @@
 #include <popcorn/init.h>
 #include <linux/cpumask.h>
 #include <linux/sched.h>
+#include <linux/vmalloc.h>
 
 #include "genif.h"
 

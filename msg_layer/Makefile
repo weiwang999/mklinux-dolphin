@@ -7,11 +7,11 @@
 
 DOLPHIN := /opt/DIS
 
-EXTRA_CFLAGS := -I$(DOLPHIN)/DIS/src/IRM_GX/drv/src -I$(DOLPHIN)/DIS/src/IRM_GX/drv/src/LINUX -I$(DOLPHIN)/DIS/src/COMMON/osif/kernel/include -I$(DOLPHIN)/DIS/src/COMMON/osif/kernel/include/LINUX -I$(DOLPHIN)/DIS/src/include/ -I$(DOLPHIN)/DIS/src/include/dis/
+EXTRA_CFLAGS := -I$(DOLPHIN)/DIS/src/IRM_GX/drv/src -I$(DOLPHIN)/DIS/src/IRM_GX/drv/src/LINUX -I$(DOLPHIN)/DIS/src/COMMON/osif/kernel/include -I$(DOLPHIN)/DIS/src/COMMON/osif/kernel/include/LINUX -I$(DOLPHIN)/DIS/src/include/ -I$(DOLPHIN)/DIS/src/include/dis/ -I/home/helios/mklinux-arm-x86/include/
 EXTRA_CFLAGS += -I/opt/DIS/include/ 
-EXTRA_CFLAGS += -D_KERNEL -DOS_IS_LINUX
+EXTRA_CFLAGS += -D_KERNEL -DOS_IS_LINUX -D_DIS_KERNEL_
 
-KBUILD_EXTRA_SYMBOLS := $(DOLPHIN)/msg_layer/Module.symvers
+KBUILD_EXTRA_SYMBOLS := ./Module.symvers 
 
 ifeq ($(KERNELRELEASE),)
 
